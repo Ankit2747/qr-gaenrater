@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function qr()
+            {
+                var a = t1.value;
+                var b = "upi://pay?pa="+a;
+                var api = "https://api.qrserver.com/v1/create-qr-code/?data="+b;
+                myqr.src = api;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>UPI QR Code Generator</h1>
+
+        Enter Your UPI ID 
+        <input id="t1"/>
+        <button onclick="qr()">Generate QR</button>
+        <hr/>
+        <img id="myqr" />
+
+    </body>
+</html>
